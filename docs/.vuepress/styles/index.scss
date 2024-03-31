@@ -1,0 +1,40 @@
+:root {
+    --sidebar-width: 14rem;
+}
+
+.sidebar {
+    font-size: 16px;
+    width: var(--sidebar-width);
+}
+
+th,
+td {
+    border: 0px solid var(--c-border-dark);
+}
+
+table {
+    border-collapse: separate;
+}
+
+.m-slider[data-v-c9dc3cb6] {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    border-bottom: 0px;
+}
+
+.my-movie {
+    text-align: center;
+    padding: 1rem;
+}
+
+.movie-tag,
+.movie-link,
+.movie-image,
+.movie-name {
+    padding: 1rem;
+}
