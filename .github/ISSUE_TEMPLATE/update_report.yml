@@ -1,6 +1,7 @@
-name: "\U0001F5F3 Update report"
-title: "欢迎投稿"
-description: Update report
+name: "\U0001F5F3 投稿"
+title: "\U0001F389 新的投稿！！"
+labels: ["Submission"]
+description: 资源投稿
 body:
   - type: markdown
     attributes:
