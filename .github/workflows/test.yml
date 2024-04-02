@@ -4,6 +4,7 @@ on:
   issues:
     types:
       - opened
+  workflow_dispatch:
 
 jobs:
   label_issue:
@@ -14,7 +15,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
-          echo "Labels:"
-          for label in ${{ fromJson(github.event.issue.labels) }}; do
-            echo $label.name
-          done
+          echo ${{ github.event.issue.labels.*.name }} > aa.txt
+          cat aa.txt
