@@ -7,10 +7,14 @@ on:
 
 jobs:
   label_issue:
-    runs-on: ubuntu-latest
+    runs-on:
+      labels: ubuntu-latest
     steps:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
-          echo ${{ github.event.issue.labels.*.name }}
+          echo "Labels:"
+          for label in ${{ fromJson(github.event.issue.labels) }}; do
+            echo $label.name
+          done
