@@ -20,3 +20,7 @@ jobs:
         if: contains(github.event.issue.labels.*.name, 'Submissio')
         run: |
           echo ${{ github.event.issue.labels[0].name }}
+
+      - name: View event
+        run: |
+          echo "${{ toJson(github) }}"
