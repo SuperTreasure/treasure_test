@@ -11,10 +11,10 @@ jobs:
     runs-on:
       labels: ubuntu-latest
     steps:
-      - env:
+      - name: echo 0
+        env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
-      - name: echo 0
         run: |
           echo ${{ github.event.issue.labels[0].name }}
       - name: echo 1
