@@ -13,5 +13,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
-          echo ${{ github.event.issue.labels }}
-          echo ${{ github.event.issue }}
+          echo ${{ github.event.issue.labels.*.name }}
