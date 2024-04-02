@@ -1,0 +1,48 @@
+name: "\U0001F5F3 Update report"
+title: "欢迎投稿"
+description: Update report
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您花时间来此投稿
+
+  - type: textarea
+    id: resource-name
+    attributes:
+      label: 资源名称
+      placeholder: 请填写您的资源名称
+    validations:
+      required: true
+
+  - type: textarea
+    id: upload-image
+    attributes:
+      label: 上传图片
+      placeholder: 请上传一张与投稿内容相关的静态图片（如：电影海报），以便订阅者快速了解分享内容。
+    validations:
+      required: true
+
+  - type: textarea
+    id: resource-description
+    attributes:
+      label: 资源描述
+      placeholder: 请您填写关于资源文件的描述（如影片的剧情梗概；300 字以内，支持特殊格式）。
+    validations:
+      required: true
+
+  - type: textarea
+    id: share-link
+    attributes:
+      label: 分享链接
+      placeholder: 请发送阿狸云盘分享链接。请确保为永久分享。
+    validations:
+      required: true
+
+  - type: textarea
+    id: resource-tags
+    attributes:
+      label: 资源标签
+      placeholder: 您将要分享的文件标签是？（多个标签之间请用空格分开）。
+    validations:
+      required: true
