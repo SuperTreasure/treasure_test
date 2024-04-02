@@ -12,11 +12,11 @@ jobs:
       labels: ubuntu-latest
     steps:
       - name: echo 0
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE_URL: ${{ github.event.issue.html_url }}
+        if: contains(github.event.issue.labels.*.name, 'Submission')
         run: |
           echo ${{ github.event.issue.labels[0].name }}
+
       - name: echo 1
+        if: contains(github.event.issue.labels.*.name, 'Submissio')
         run: |
-          echo ${{ github.event.issue.labels[1].name }}
+          echo ${{ github.event.issue.labels[0].name }}
