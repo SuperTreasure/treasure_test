@@ -5,10 +5,10 @@ import { getDirname, path } from "@vuepress/utils";
 import { sidebar_date } from "./configs";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 
-const __dirname = getDirname( import.meta.url );
+const __dirname=getDirname( import.meta.url );
 
 export default {
-    base: "/treasure_test",
+    base: process.env.DEPLOY_ENV==='GITHUB'? '/treasure_test/':'/',
     port: 23355,
     title: "神秘的宝贝",
     head: [ [ { rel: "stylesheet", href: "/styles/index.scss" } ] ],
@@ -41,7 +41,7 @@ export default {
     //   vue: {},
     // }),
     bundler:
-        process.env.DOCS_BUNDLER === "webpack"
+        process.env.DOCS_BUNDLER==="webpack"
             ? webpackBundler()
-            : viteBundler(),
+            :viteBundler(),
 };
